@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const app = express();
 
-const coffees = require("./routes/coffees");
+const coffees = require("./routes/coffee");
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
