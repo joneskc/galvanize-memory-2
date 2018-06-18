@@ -4,9 +4,11 @@ const router = express.Router();
 const queries = require('../queries');
 
 router.get("/", (request, response, next) => {
-    queries.list().then(coffees => {
+    queries.list()
+    .then(coffees => {
         response.json({coffees});
-    }).catch(next);
+    })
+    .catch(next);
 });
 
 router.get("/:id", (request, response, next) => {

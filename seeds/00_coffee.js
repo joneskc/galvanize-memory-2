@@ -22,5 +22,7 @@ exports.seed = function(knex, Promise) {
           aroma: 6
         }
       ]);
-    });
+    }).then(() => {
+      return knex.raw("ALTER SEQUENCE resolutions_id_seq RESTART WITH 4;")
+    })
 };
